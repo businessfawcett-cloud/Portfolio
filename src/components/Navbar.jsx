@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 const navItems = [
   { label: 'Home', href: '#hero' },
@@ -8,17 +8,17 @@ const navItems = [
 ]
 
 export default function Navbar() {
+  const { scrollY } = useScroll()
+  const x = useTransform(scrollY, [0, 150], ['-50%', 'calc(100vw - 40px)'])
+  const opacity = useTransform(scrollY, [0, 150], [1, 0])
+
   return (
     <motion.nav
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="card"
       style={{
         position: 'fixed',
         top: 16,
         left: '50%',
-        transform: 'translateX(-50%)',
+        x,
         zIndex: 1000,
         padding: '10px 24px',
         display: 'flex',

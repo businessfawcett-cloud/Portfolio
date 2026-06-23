@@ -32,7 +32,7 @@ export default function DataSpotlight() {
               <span className="tag" style={{ fontSize: '0.65rem' }}>B2B BI SaaS</span>
             </div>
 
-            <p style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: 20 }}>
+            <p style={{ fontSize: '0.85rem', color: '#475569', lineHeight: 1.7, marginBottom: 20 }}>
               A B2B business intelligence and competitor analysis SaaS that automates the extraction of public market data to generate structured strategic briefs.
             </p>
 
@@ -61,9 +61,9 @@ export default function DataSpotlight() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass"
-                style={{ padding: '8px 18px', borderRadius: 100, textDecoration: 'none', color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', fontWeight: 500, transition: 'all 0.2s' }}
-                onMouseEnter={(e) => { e.target.style.color = '#fff'; e.target.style.background = 'rgba(255,255,255,0.04)' }}
-                onMouseLeave={(e) => { e.target.style.color = 'rgba(255,255,255,0.6)'; e.target.style.background = '' }}
+                style={{ padding: '8px 18px', borderRadius: 100, textDecoration: 'none', color: '#475569', fontSize: '0.75rem', fontWeight: 500, transition: 'all 0.2s' }}
+                onMouseEnter={(e) => { e.target.style.color = '#1a1a2e'; e.target.style.background = 'rgba(0,0,0,0.03)' }}
+                onMouseLeave={(e) => { e.target.style.color = '#475569'; e.target.style.background = '' }}
               >
                 GitHub
               </a>
@@ -78,7 +78,7 @@ export default function DataSpotlight() {
           transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
         >
           <div className="glass-card" style={{ padding: '32px 28px' }}>
-            <h4 style={{ fontSize: '0.85rem', fontWeight: 600, color: 'rgba(255,255,255,0.5)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 24 }}>
+            <h4 style={{ fontSize: '0.85rem', fontWeight: 600, color: '#334155', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 24 }}>
               Architecture Flow
             </h4>
 
@@ -94,8 +94,8 @@ export default function DataSpotlight() {
                     )}
                   </div>
                   <div style={{ paddingBottom: i < steps.length - 1 ? 16 : 0 }}>
-                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#e8e8ed', marginBottom: 4 }}>{step.label}</p>
-                    <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.45)', lineHeight: 1.6 }}>{step.desc}</p>
+                    <p style={{ fontSize: '0.85rem', fontWeight: 600, color: '#1e293b', marginBottom: 4 }}>{step.label}</p>
+                    <p style={{ fontSize: '0.75rem', color: '#475569', lineHeight: 1.6 }}>{step.desc}</p>
                   </div>
                 </div>
               ))}

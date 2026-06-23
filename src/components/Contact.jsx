@@ -20,7 +20,7 @@ export default function Contact() {
         <h2 className="section-title" style={{ marginBottom: 16 }}>
           Let's Build Something
         </h2>
-        <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
+        <p style={{ fontSize: '0.9rem', color: '#475569', marginBottom: 40, maxWidth: 480, margin: '0 auto 40px' }}>
           Open to research collaboration, enterprise architecture discussions, and building the next generation of AI-powered tools.
         </p>
 
@@ -41,18 +41,18 @@ export default function Contact() {
                 gap: 8,
                 fontSize: '0.85rem',
                 fontWeight: 500,
-                color: 'rgba(255,255,255,0.7)',
+                color: '#334155',
                 transition: 'all 0.2s',
-                border: '1px solid rgba(255,255,255,0.06)',
+                border: '1px solid #cbd5e1',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#fff'
-                e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)'
-                e.currentTarget.style.background = 'rgba(139, 92, 246, 0.06)'
+                e.currentTarget.style.color = '#1a1a2e'
+                e.currentTarget.style.borderColor = '#7c3aed'
+                e.currentTarget.style.background = 'rgba(124, 58, 237, 0.04)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = 'rgba(255,255,255,0.7)'
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'
+                e.currentTarget.style.color = '#334155'
+                e.currentTarget.style.borderColor = '#cbd5e1'
                 e.currentTarget.style.background = ''
               }}
             >
