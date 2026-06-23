@@ -13,10 +13,10 @@ const projects = [
       'A B2B college counseling management platform designed to streamline counselor workflows and student tracking. Successfully incubated via a formal partnership with the Jordan Applied Technology Center (JATC) after a blind enterprise pitch.',
     stack: [
       'Next.js', 'React', 'Neon PostgreSQL', 'Drizzle ORM',
-      { label: 'Clerk Auth', colorClass: 'tag-cyan' },
+      { label: 'Clerk Auth', colorClass: 'tag-neutral' },
       'Redis',
-      { label: 'Groq AI', colorClass: 'tag-orange' },
-      { label: 'Stripe', colorClass: 'tag-green' },
+      { label: 'Groq AI', colorClass: 'tag-neutral' },
+      { label: 'Stripe', colorClass: 'tag-neutral' },
     ],
     metrics: [
       'Integrated Groq AI for low-latency client communication tools',
@@ -44,8 +44,8 @@ const projects = [
     description:
       'A high-performance monorepo trading card marketplace engineered for the TCG community, featuring real-time card scanning and instant grading.',
     stack: [
-      'Next.js', 'React', { label: 'Supabase PostgreSQL', colorClass: 'tag-green' },
-      { label: 'Tesseract.js OCR', colorClass: 'tag-orange' },
+      'Next.js', 'React',       { label: 'Supabase PostgreSQL', colorClass: 'tag-neutral' },
+      { label: 'Tesseract.js OCR', colorClass: 'tag-neutral' },
       'Google OAuth', 'TailwindCSS',
     ],
     metrics: [
@@ -75,10 +75,10 @@ const projects = [
       'A production customer support SaaS and enterprise receptionist platform capable of handling automated, real-time voice and text multi-channel communication.',
     stack: [
       'Node.js', 'pgvector', 'ChromaDB',
-      { label: 'OpenRouter API', colorClass: 'tag-orange' },
-      { label: 'Twilio Voice/SMS', colorClass: 'tag-cyan' },
-      { label: 'ElevenLabs', colorClass: 'tag-pink' },
-      { label: 'AssemblyAI', colorClass: 'tag-green' },
+      { label: 'OpenRouter API', colorClass: 'tag-neutral' },
+      { label: 'Twilio Voice/SMS', colorClass: 'tag-neutral' },
+      { label: 'ElevenLabs', colorClass: 'tag-neutral' },
+      { label: 'AssemblyAI', colorClass: 'tag-neutral' },
     ],
     metrics: [
       'Configured a robust Retrieval-Augmented Generation (RAG) pipeline for domain-specific knowledge extraction',
@@ -107,8 +107,8 @@ const projects = [
       'A B2B business intelligence and competitor analysis SaaS that automates the extraction of public market data to generate structured strategic briefs.',
     stack: [
       'Python', 'FastAPI',
-      { label: 'Firecrawl API', colorClass: 'tag-cyan' },
-      { label: 'Groq LLMs', colorClass: 'tag-orange' },
+      { label: 'Firecrawl API', colorClass: 'tag-neutral' },
+      { label: 'Groq LLMs', colorClass: 'tag-neutral' },
       'TailwindCSS',
     ],
     metrics: [
@@ -175,7 +175,7 @@ export default function CaseStudies() {
         <h2 className="section-title">Engineering in Production</h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(360px, 1fr))', gap: 28 }}>
         {projects.map((project, i) => (
           <CaseStudyCard key={project.name} project={project} index={i} onViewDetails={setSelectedProject} />
         ))}

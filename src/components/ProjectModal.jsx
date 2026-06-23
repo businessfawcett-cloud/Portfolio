@@ -36,17 +36,17 @@ export default function ProjectModal({ project, onClose }) {
           exit={{ opacity: 0, scale: 0.92, y: 20 }}
           transition={{ duration: 0.25, ease: 'easeOut' }}
           onClick={(e) => e.stopPropagation()}
-          className="card"
-          style={{
-            width: '100%',
-            maxWidth: 720,
-            maxHeight: '90vh',
-            overflowY: 'auto',
-            background: '#ffffff',
-            border: '3px solid #1a1a2e',
-            borderRadius: 20,
-            boxShadow: '12px 12px 0px #1a1a2e',
-          }}
+            className="card"
+            style={{
+              width: '100%',
+              maxWidth: 720,
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              background: '#ffffff',
+              border: '1.5px solid #e0dcd4',
+              borderRadius: 20,
+              boxShadow: '0 4px 24px rgba(0,0,0,0.08)',
+            }}
         >
           <div
             style={{
@@ -57,7 +57,7 @@ export default function ProjectModal({ project, onClose }) {
               alignItems: 'center',
               justifyContent: 'center',
               overflow: 'hidden',
-              borderBottom: '3px solid #1a1a2e',
+              borderBottom: '1.5px solid #e0dcd4',
               borderRadius: '17px 17px 0 0',
             }}
           >
@@ -84,9 +84,10 @@ export default function ProjectModal({ project, onClose }) {
                 width: 36,
                 height: 36,
                 borderRadius: '50%',
-                border: '3px solid #1a1a2e',
-                background: '#ffffff',
-                color: '#1a1a2e',
+                border: '1.5px solid #d4d0c8',
+                background: 'rgba(255,255,255,0.85)',
+                backdropFilter: 'blur(8px)',
+                color: '#4a4a5e',
                 fontSize: '1rem',
                 fontWeight: 700,
                 cursor: 'pointer',
@@ -95,8 +96,8 @@ export default function ProjectModal({ project, onClose }) {
                 alignItems: 'center',
                 justifyContent: 'center',
                 fontFamily: "'Space Grotesk', sans-serif",
-                transition: 'transform 0.15s',
-                boxShadow: '3px 3px 0px #1a1a2e',
+                transition: 'transform 0.15s, background 0.15s',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.06)',
               }}
               onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.1)')}
               onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
@@ -122,7 +123,7 @@ export default function ProjectModal({ project, onClose }) {
               }}>{project.type}</span>
             </div>
 
-            <p style={{ fontSize: '0.88rem', color: '#6b6b80', lineHeight: 1.8, marginBottom: 24 }}>
+            <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.8, marginBottom: 24 }}>
               {project.description}
             </p>
 
@@ -164,9 +165,9 @@ export default function ProjectModal({ project, onClose }) {
                   background: '#faf7f2',
                   borderRadius: 12,
                   padding: 20,
-                  border: '2px solid #1a1a2e',
+                  border: '1px solid #e0dcd4',
                 }}>
-                  <p style={{ fontSize: '0.82rem', color: '#6b6b80', lineHeight: 1.7, marginBottom: 12 }}>
+                  <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: 1.7, marginBottom: 12 }}>
                     {project.architecture.summary}
                   </p>
                   <ul style={{ listStyle: 'none', padding: 0 }}>
