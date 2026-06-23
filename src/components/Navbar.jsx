@@ -1,4 +1,5 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 
 const navItems = [
   { label: 'Home', href: '#hero' },
@@ -8,17 +9,22 @@ const navItems = [
 ]
 
 export default function Navbar() {
-  const { scrollY } = useScroll()
-  const x = useTransform(scrollY, [0, 150], ['-50%', 'calc(100vw - 40px)'])
-  const opacity = useTransform(scrollY, [0, 150], [1, 0])
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
     <motion.nav
+      animate={{ x: scrolled ? 'calc(50vw - 16px)' : '-50%' }}
+      transition={{ type: 'spring', stiffness: 200, damping: 25 }}
       style={{
         position: 'fixed',
         top: 16,
         left: '50%',
-        x,
         zIndex: 1000,
         padding: '10px 24px',
         display: 'flex',
