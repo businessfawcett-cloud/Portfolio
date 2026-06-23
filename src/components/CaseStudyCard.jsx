@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 
 const colorMap = {
-  purple: { border: '#7c3aed', bg: '#ede9fe' },
-  cyan: { border: '#06b6d4', bg: '#ecfeff' },
-  green: { border: '#10b981', bg: '#ecfdf5' },
-  orange: { border: '#f59e0b', bg: '#fff7ed' },
-  pink: { border: '#ec4899', bg: '#fdf2f8' },
+  purple: { border: '#7c3aed', tag: 'tag-purple', bg: '#ede9fe' },
+  cyan: { border: '#06b6d4', tag: 'tag-cyan', bg: '#ecfeff' },
+  green: { border: '#10b981', tag: 'tag-green', bg: '#ecfdf5' },
+  orange: { border: '#f59e0b', tag: 'tag-orange', bg: '#fff7ed' },
+  pink: { border: '#ec4899', tag: 'tag-pink', bg: '#fdf2f8' },
 }
 
 export default function CaseStudyCard({ project, index, onViewDetails }) {
@@ -30,7 +30,7 @@ export default function CaseStudyCard({ project, index, onViewDetails }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderBottom: '1.5px solid #e0dcd4',
+          borderBottom: '3px solid #1a1a2e',
         }}
       >
         {project.image ? (
@@ -54,21 +54,21 @@ export default function CaseStudyCard({ project, index, onViewDetails }) {
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, letterSpacing: '-0.02em', color: '#1a1a2e' }}>
             {project.name}
           </h3>
-          <span className="tag tag-neutral" style={{ fontSize: '0.6rem' }}>{project.type}</span>
+          <span className={`tag ${c.tag}`} style={{ fontSize: '0.6rem' }}>{project.type}</span>
         </div>
 
-        <p style={{ fontSize: '0.82rem', color: '#475569', lineHeight: 1.7, marginBottom: 14 }}>
+        <p style={{ fontSize: '0.82rem', color: '#6b6b80', lineHeight: 1.7, marginBottom: 14 }}>
           {project.description}
         </p>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5, marginBottom: 0 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 0 }}>
           {project.stack.slice(0, 5).map((tech) => (
-            <span key={typeof tech === 'string' ? tech : tech.label} className={`tag ${typeof tech === 'string' ? '' : tech.colorClass || ''}`} style={{ fontSize: '0.6rem', padding: '3px 10px', borderWidth: '1.5px' }}>
+            <span key={typeof tech === 'string' ? tech : tech.label} className={`tag ${typeof tech === 'string' ? '' : tech.colorClass || ''}`} style={{ fontSize: '0.6rem' }}>
               {typeof tech === 'string' ? tech : tech.label}
             </span>
           ))}
           {project.stack.length > 5 && (
-            <span className="tag" style={{ fontSize: '0.6rem', padding: '3px 10px', borderWidth: '1.5px' }}>+{project.stack.length - 5}</span>
+            <span className="tag" style={{ fontSize: '0.6rem' }}>+{project.stack.length - 5}</span>
           )}
         </div>
       </div>

@@ -13,6 +13,7 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
+      className="card"
       style={{
         position: 'fixed',
         top: 16,
@@ -23,12 +24,10 @@ export default function Navbar() {
         display: 'flex',
         alignItems: 'center',
         gap: 32,
-        background: 'rgba(255, 255, 255, 0.75)',
-        backdropFilter: 'blur(16px)',
-        WebkitBackdropFilter: 'blur(16px)',
+        background: '#ffffff',
         borderRadius: 100,
-        border: '1px solid rgba(255, 255, 255, 0.5)',
-        boxShadow: '0 4px 24px rgba(0, 0, 0, 0.06)',
+        border: '3px solid #1a1a2e',
+        boxShadow: '6px 6px 0px #1a1a2e',
       }}
     >
       <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: '1rem', color: '#1a1a2e' }}>
@@ -40,19 +39,22 @@ export default function Navbar() {
             key={item.href}
             href={item.href}
             style={{
-              color: '#475569',
+              color: '#6b6b80',
               textDecoration: 'none',
-              fontSize: '0.85rem',
-              fontWeight: 500,
+              fontSize: '0.8rem',
+              fontWeight: 600,
               fontFamily: "'Space Grotesk', sans-serif",
               transition: 'color 0.15s',
               padding: '4px 0',
+              borderBottom: '2px solid transparent',
             }}
             onMouseEnter={(e) => {
               e.target.style.color = '#7c3aed'
+              e.target.style.borderBottomColor = '#7c3aed'
             }}
             onMouseLeave={(e) => {
-              e.target.style.color = '#475569'
+              e.target.style.color = '#6b6b80'
+              e.target.style.borderBottomColor = 'transparent'
             }}
           >
             {item.label}

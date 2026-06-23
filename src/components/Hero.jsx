@@ -55,10 +55,10 @@ export default function Hero() {
           transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           <span
-            className="tag tag-neutral"
-            style={{ fontSize: '0.95rem', marginBottom: 24, padding: '6px 18px' }}
+            className="tag tag-purple"
+            style={{ fontSize: '0.75rem', marginBottom: 20 }}
           >
-            Full-Stack Engineer & AI Systems Engineer
+            Full-Stack Engineer & AI Skills Engineer
           </span>
         </motion.div>
 
@@ -68,7 +68,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1, ease: 'easeOut' }}
           style={{
             fontFamily: "'Space Grotesk', sans-serif",
-            fontSize: 'clamp(2.6rem, 6vw, 4.5rem)',
+            fontSize: 'clamp(3rem, 8vw, 6rem)',
             fontWeight: 700,
             lineHeight: 1.05,
             letterSpacing: '-0.03em',
@@ -85,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2, ease: 'easeOut' }}
           style={{
             fontSize: 'clamp(1rem, 2vw, 1.15rem)',
-            color: '#475569',
+            color: '#6b6b80',
             maxWidth: 600,
             margin: '0 auto 36px',
             lineHeight: 1.7,
@@ -101,22 +101,12 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.3, ease: 'easeOut' }}
           style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}
         >
-          <motion.a
-            href="#case-studies"
-            className="btn btn-glass-primary"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-          >
+          <a href="#case-studies" className="btn btn-primary">
             View My Work
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="btn btn-glass"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-          >
+          </a>
+          <a href="#contact" className="btn btn-secondary">
             Get In Touch
-          </motion.a>
+          </a>
         </motion.div>
       </div>
     </section>
