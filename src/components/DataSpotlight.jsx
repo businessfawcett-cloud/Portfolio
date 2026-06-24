@@ -50,7 +50,7 @@ export default function DataSpotlight() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass"
-                style={{ padding: '8px 18px', borderRadius: 100, textDecoration: 'none', color: '#fff', fontSize: '0.75rem', fontWeight: 600, border: '1px solid rgba(139, 92, 246, 0.3)', transition: 'all 0.2s' }}
+                style={{ padding: '8px 18px', borderRadius: 100, textDecoration: 'none', color: '#1a1a2e', fontSize: '0.75rem', fontWeight: 600, border: '1px solid rgba(139, 92, 246, 0.3)', background: 'rgba(139, 92, 246, 0.08)', transition: 'all 0.2s' }}
                 onMouseEnter={(e) => (e.target.style.background = 'rgba(139, 92, 246, 0.12)')}
                 onMouseLeave={(e) => (e.target.style.background = '')}
               >
