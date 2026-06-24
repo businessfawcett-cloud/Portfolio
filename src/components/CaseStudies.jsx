@@ -21,7 +21,7 @@ const projects = [
     metrics: [
       'Integrated Groq AI for low-latency client communication tools',
       'Scaled infrastructure to support multiple active Stripe subscription tiers ($49–$199/mo)',
-      <a href="https://codeelevation.org" target="_blank" rel="noopener noreferrer" style="color:rgba(139,92,246,0.8);text-decoration:underline;text-underline-offset:2px">Built and launched the core engine live for 30+ students at Code Elevation hackathon</a>,
+      <a key="code-elevation" href="https://codeelevation.org" target="_blank" rel="noopener noreferrer" style={{color:'rgba(139,92,246,0.8)',textDecoration:'underline',textUnderlineOffset:2}}>Built and launched the core engine live for 30+ students at Code Elevation hackathon</a>,
     ],
     architecture: {
       summary: 'Architected as a full-stack Next.js application with a serverless PostgreSQL backend, real-time Redis caching layer, and AI-powered communication tools via Groq.',
@@ -156,7 +156,7 @@ const projects = [
       ],
     },
     liveUrl: 'https://codeelevation.org',
-    githubUrl: 'https://github.com/businessfawcett-cloud/code-elevation',
+    githubUrl: null,
   },
 ]
 
