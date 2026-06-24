@@ -34,7 +34,7 @@ const projects = [
       ],
     },
     liveUrl: 'https://skoraadmit.com',
-    githubUrl: 'https://github.com/businessfawcett-cloud/skora',
+    githubUrl: 'https://github.com/businessfawcett-cloud/AdmitPath',
   },
   {
     name: 'CatchAndTrade',
@@ -64,7 +64,7 @@ const projects = [
       ],
     },
     liveUrl: 'https://catchandtrade.com',
-    githubUrl: 'https://github.com/businessfawcett-cloud/catch-and-trade',
+    githubUrl: 'https://github.com/businessfawcett-cloud/catchandtrade',
   },
   {
     name: 'MyNexusAI',
@@ -96,7 +96,7 @@ const projects = [
       ],
     },
     liveUrl: 'https://mynexusai.org',
-    githubUrl: 'https://github.com/businessfawcett-cloud/mynexus-ai',
+    githubUrl: 'https://github.com/businessfawcett-cloud/mynexusai-support',
   },
   {
     name: 'Alvien',
@@ -127,7 +127,7 @@ const projects = [
       ],
     },
     liveUrl: 'https://alvien.onrender.com',
-    githubUrl: 'https://github.com/businessfawcett-cloud/alvien',
+    githubUrl: null,
   },
   {
     name: 'Code Elevation',

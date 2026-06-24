@@ -56,17 +56,7 @@ export default function DataSpotlight() {
               >
                 Live Site
               </a>
-              <a
-                href="https://github.com/businessfawcett-cloud/alvien"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glass"
-                style={{ padding: '8px 18px', borderRadius: 100, textDecoration: 'none', color: '#475569', fontSize: '0.75rem', fontWeight: 500, transition: 'all 0.2s' }}
-                onMouseEnter={(e) => { e.target.style.color = '#1a1a2e'; e.target.style.background = 'rgba(0,0,0,0.03)' }}
-                onMouseLeave={(e) => { e.target.style.color = '#475569'; e.target.style.background = '' }}
-              >
-                GitHub
-              </a>
+
             </div>
           </div>
         </motion.div>

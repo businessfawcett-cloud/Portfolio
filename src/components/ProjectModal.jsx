@@ -227,15 +227,17 @@ export default function ProjectModal({ project, onClose }) {
               >
                 Visit Live Site
               </a>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary"
-                style={{ fontSize: '0.82rem', padding: '10px 24px' }}
-              >
-                View on GitHub
-              </a>
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                  style={{ fontSize: '0.82rem', padding: '10px 24px' }}
+                >
+                  View on GitHub
+                </a>
+              )}
             </div>
           </div>
         </motion.div>
