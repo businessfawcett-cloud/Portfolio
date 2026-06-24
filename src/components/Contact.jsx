@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const links = [
   { label: 'Email', href: 'mailto:parkerscottfawcett@gmail.com', icon: '✉' },
@@ -7,6 +8,8 @@ const links = [
 ]
 
 export default function Contact() {
+  const isMobile = useIsMobile()
+
   return (
     <section id="contact" className="section-container">
       <motion.div
@@ -24,7 +27,7 @@ export default function Contact() {
           Open to research collaboration, enterprise architecture discussions, and building the next generation of AI-powered tools.
         </p>
 
-        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap', flexDirection: isMobile ? 'column' : 'row', alignItems: 'center' }}>
           {links.map((link) => (
             <motion.a
               key={link.label}
@@ -33,7 +36,7 @@ export default function Contact() {
               className="glass"
               whileHover={{ y: -2 }}
               style={{
-                padding: '14px 28px',
+                padding: isMobile ? '12px 20px' : '14px 28px',
                 borderRadius: 100,
                 textDecoration: 'none',
                 display: 'flex',

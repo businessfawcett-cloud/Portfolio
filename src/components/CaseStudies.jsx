@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import CaseStudyCard from './CaseStudyCard'
 import ProjectModal from './ProjectModal'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const projects = [
   {
@@ -161,6 +162,7 @@ const projects = [
 ]
 
 export default function CaseStudies() {
+  const isMobile = useIsMobile()
   const [selectedProject, setSelectedProject] = useState(null)
 
   return (
@@ -175,7 +177,7 @@ export default function CaseStudies() {
         <h2 className="section-title">Engineering in Production</h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(auto-fit, minmax(320px, 1fr))', gap: isMobile ? 20 : 24 }}>
         {projects.map((project, i) => (
           <CaseStudyCard key={project.name} project={project} index={i} onViewDetails={setSelectedProject} />
         ))}

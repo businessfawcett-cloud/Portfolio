@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const colorMap = {
   purple: { accent: '#7c3aed', border: '#7c3aed', bg: '#ede9fe' },
@@ -9,6 +10,7 @@ const colorMap = {
 }
 
 export default function ProjectModal({ project, onClose }) {
+  const isMobile = useIsMobile()
   const c = colorMap[project.color] || colorMap.purple
 
   return (
@@ -26,7 +28,7 @@ export default function ProjectModal({ project, onClose }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: 24,
+          padding: isMobile ? 0 : 24,
           background: 'rgba(26, 26, 46, 0.5)',
         }}
       >
@@ -39,8 +41,9 @@ export default function ProjectModal({ project, onClose }) {
           className="card"
           style={{
             width: '100%',
-            maxWidth: 720,
-            maxHeight: '90vh',
+            maxWidth: isMobile ? '100%' : 720,
+            maxHeight: isMobile ? '100vh' : '90vh',
+            borderRadius: isMobile ? 0 : 20,
             overflowY: 'auto',
             background: '#ffffff',
             border: '3px solid #1a1a2e',
@@ -50,7 +53,7 @@ export default function ProjectModal({ project, onClose }) {
         >
           <div
             style={{
-              height: 220,
+              height: isMobile ? 160 : 220,
               background: c.bg,
               position: 'relative',
               display: 'flex',
@@ -58,7 +61,7 @@ export default function ProjectModal({ project, onClose }) {
               justifyContent: 'center',
               overflow: 'hidden',
               borderBottom: '3px solid #1a1a2e',
-              borderRadius: '17px 17px 0 0',
+              borderRadius: isMobile ? 0 : '17px 17px 0 0',
             }}
           >
             {project.image ? (
@@ -105,7 +108,7 @@ export default function ProjectModal({ project, onClose }) {
             </button>
           </div>
 
-          <div style={{ padding: '28px 28px 32px' }}>
+          <div style={{ padding: isMobile ? '20px 18px 24px' : '28px 28px 32px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 14 }}>
               <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.6rem', fontWeight: 700, letterSpacing: '-0.02em', color: '#1a1a2e' }}>
                 {project.name}
@@ -217,13 +220,13 @@ export default function ProjectModal({ project, onClose }) {
               </ul>
             </div>
 
-            <div style={{ display: 'flex', gap: 12 }}>
+            <div style={{ display: 'flex', gap: 12, flexDirection: isMobile ? 'column' : 'row' }}>
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
-                style={{ fontSize: '0.82rem', padding: '10px 24px' }}
+                style={{ fontSize: '0.82rem', padding: '10px 24px', textAlign: 'center' }}
               >
                 Visit Live Site
               </a>
@@ -233,7 +236,7 @@ export default function ProjectModal({ project, onClose }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-secondary"
-                  style={{ fontSize: '0.82rem', padding: '10px 24px' }}
+                  style={{ fontSize: '0.82rem', padding: '10px 24px', textAlign: 'center' }}
                 >
                   View on GitHub
                 </a>

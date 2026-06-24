@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const steps = [
   { label: 'Firecrawl API', desc: 'Bypasses anti-scraping protection, parses raw semantic HTML from competitor domains' },
@@ -7,6 +8,8 @@ const steps = [
 ]
 
 export default function DataSpotlight() {
+  const isMobile = useIsMobile()
+
   return (
     <section id="data-spotlight" className="section-container">
       <motion.div
@@ -19,7 +22,7 @@ export default function DataSpotlight() {
         <h2 className="section-title">The Pipeline</h2>
       </motion.div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, alignItems: 'start' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 20 : 32, alignItems: 'start' }}>
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}

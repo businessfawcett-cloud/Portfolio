@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const colorMap = {
   purple: { border: '#7c3aed', tag: 'tag-purple', bg: '#ede9fe' },
@@ -9,6 +10,7 @@ const colorMap = {
 }
 
 export default function CaseStudyCard({ project, index, onViewDetails }) {
+  const isMobile = useIsMobile()
   const c = colorMap[project.color] || colorMap.purple
 
   return (
@@ -23,7 +25,7 @@ export default function CaseStudyCard({ project, index, onViewDetails }) {
     >
       <div
         style={{
-          height: 180,
+          height: isMobile ? 130 : 180,
           background: c.bg,
           position: 'relative',
           overflow: 'hidden',
@@ -49,7 +51,7 @@ export default function CaseStudyCard({ project, index, onViewDetails }) {
         )}
       </div>
 
-      <div style={{ padding: '24px 24px 28px' }}>
+      <div style={{ padding: isMobile ? '18px 18px 22px' : '24px 24px 28px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
           <h3 style={{ fontSize: '1.2rem', fontWeight: 700, letterSpacing: '-0.02em', color: '#1a1a2e' }}>
             {project.name}

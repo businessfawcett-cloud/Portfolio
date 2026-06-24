@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 const blobs = [
   { size: 400, x: '-5%', y: '-15%', color: 'rgba(124, 58, 237, 0.08)', rx: '40% 60% 60% 40% / 50% 40% 60% 50%', duration: 14, delay: 0 },
@@ -7,6 +8,8 @@ const blobs = [
 ]
 
 export default function Hero() {
+  const isMobile = useIsMobile()
+
   return (
     <section
       id="hero"
@@ -18,10 +21,10 @@ export default function Hero() {
         alignItems: 'center',
         justifyContent: 'center',
         overflow: 'hidden',
-        padding: '120px 24px 80px',
+        padding: isMobile ? '100px 20px 60px' : '120px 24px 80px',
       }}
     >
-      {blobs.map((blob, i) => (
+      {blobs.slice(0, isMobile ? 1 : 3).map((blob, i) => (
         <motion.div
           key={i}
           animate={{
